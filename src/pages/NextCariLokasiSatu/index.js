@@ -31,7 +31,7 @@ const NextCariLokasiSatu = ({ navigation }) => {
             </TouchableOpacity>
             <View style={styles.kotakLokasi}>
                 <View>
-                    <Text style={styles.teksPertama}>Tambah Alamat</Text>
+                    <Text style={styles.teksPertama}>Cek lagi titik jemput di peta</Text>
                     <TouchableOpacity>
                         <IconEdit style={styles.iconMapSearch}></IconEdit>
                     </TouchableOpacity>
