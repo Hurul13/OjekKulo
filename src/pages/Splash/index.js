@@ -5,7 +5,7 @@ const Splash = ({ navigation }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('DetailLokasiPilihAdd');
+      navigation.replace('NextCariLokasiSatu');
     }, 3000);
   }, [navigation]);
 

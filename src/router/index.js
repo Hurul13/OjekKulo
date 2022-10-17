@@ -7,10 +7,13 @@ import {
   Splash, 
   CariLokasi, 
   AddFavoritAddress, 
+  IsiFavoritAddress, 
   AddFavoritKantor, 
-  DetailLokasiPilih, 
-  DetailLokasiPilihAdd, 
-  EditLokasi} from '../pages';
+  AddDataFavorit, 
+  AddDataFavoritNote, 
+  EditLokasi,
+  NextCariLokasiSatu
+} from '../pages';
 import {BottomNavigator} from '../components/';
 
 const Stack = createNativeStackNavigator();
@@ -31,10 +34,12 @@ function Router() {
         <Stack.Screen name="CariLokasi" component={CariLokasi} options={{headerShown: false}}/>
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name="AddFavoritAddress" component={AddFavoritAddress} options={{headerShown: false}}/>
+        <Stack.Screen name="IsiFavoritAddress" component={IsiFavoritAddress} options={{headerShown: false}}/>
         <Stack.Screen name="AddFavoritKantor" component={AddFavoritKantor} options={{headerShown: false}}/>
-        <Stack.Screen name="DetailLokasiPilih" component={DetailLokasiPilih} options={{headerShown: false}}/>
-        <Stack.Screen name="DetailLokasiPilihAdd" component={DetailLokasiPilihAdd} options={{headerShown: false}}/>
+        <Stack.Screen name="AddDataFavorit" component={AddDataFavorit} options={{headerShown: false}}/>
+        <Stack.Screen name="AddDataFavoritNote" component={AddDataFavoritNote} options={{headerShown: false}}/>
         <Stack.Screen name="EditLokasi" component={EditLokasi} options={{headerShown: false}}/>
+        <Stack.Screen name="NextCariLokasiSatu" component={NextCariLokasiSatu} options={{headerShown: false}}/>
       </Stack.Navigator>
   );
 };

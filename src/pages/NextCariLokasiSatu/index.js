@@ -12,13 +12,15 @@ import {
     IconFavoritBlack,
     IconMapSearch,
     IconMapBiru,
-    IconCancel
+    IconCancel,
+    IconEdit,
+    IconPaper
 } from '../../assets'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-const DetailLokasiPilihAdd = ({ navigation }) => {
+const NextCariLokasiSatu = ({ navigation }) => {
     return (
         <View>
             <TouchableOpacity onPress={() => {
@@ -31,7 +33,7 @@ const DetailLokasiPilihAdd = ({ navigation }) => {
                 <View>
                     <Text style={styles.teksPertama}>Tambah Alamat</Text>
                     <TouchableOpacity>
-                        <IconMapSearch style={styles.iconMapSearch}></IconMapSearch>
+                        <IconEdit style={styles.iconMapSearch}></IconEdit>
                     </TouchableOpacity>
                 </View>
                 <TouchableOpacity onPress={() => {
@@ -51,12 +53,6 @@ const DetailLokasiPilihAdd = ({ navigation }) => {
                     <TouchableOpacity>
                         <Text style={styles.teksDua}>Tempat Magang</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => {
-                        console.log(1)
-                        navigation.navigate('DetailLokasiPilih')
-                    }}>
-                        <IconCancel style={styles.iconCancel}></IconCancel>
-                    </TouchableOpacity>
                 </View>
                 <TouchableOpacity>
                     <View>
@@ -70,7 +66,7 @@ const DetailLokasiPilihAdd = ({ navigation }) => {
     )
 }
 
-export default DetailLokasiPilihAdd
+export default NextCariLokasiSatu
 
 const styles = StyleSheet.create({
     iconBackBulat: {

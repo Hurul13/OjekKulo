@@ -19,6 +19,11 @@ import IconMapSearch from './mapSearch.svg'
 import IconLokasiOren from './lokasiOren.svg'
 import IconSearch from './search.svg'
 import IconCancel from './cancel.svg'
+import IconArrowBawah from './arrowBawah.svg'
+import IconArrowAtas from './arrowAtas.svg'
+import IconFavoritBig from './favoritBig.svg'
+import IconEdit from './edit.svg'
+import IconPaper from './paper.svg'
 
 export { 
     IconBack, 
@@ -41,5 +46,10 @@ export {
     IconMapSearch, 
     IconLokasiOren,
     IconSearch,
-    IconCancel
+    IconCancel,
+    IconArrowBawah,
+    IconArrowAtas,
+    IconFavoritBig,
+    IconEdit,
+    IconPaper
 }

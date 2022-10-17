@@ -2,13 +2,6 @@ import { StyleSheet, Text, View, Image, ImageBackground, Dimensions, TouchableOp
 import React from 'react'
 import {
   IconBackPanahItem,
-  IconFavorit,
-  IconLokasiBiru,
-  IconMapBiru,
-  IconMapOren,
-  IconMapPeta,
-  IconMoreGray,
-  IconPlus,
   NotFoundPeta
 } from '../../assets'
 import { NavigationContainer } from '@react-navigation/native';
