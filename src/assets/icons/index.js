@@ -16,6 +16,9 @@ import IconSavePlus from './savePlus.svg'
 import IconBackBulat from './backBulat.svg'
 import IconFavoritBlack from './favoritBlack.svg'
 import IconMapSearch from './mapSearch.svg'
+import IconLokasiOren from './lokasiOren.svg'
+import IconSearch from './search.svg'
+import IconCancel from './cancel.svg'
 
 export { 
     IconBack, 
@@ -35,5 +38,8 @@ export {
     IconPlus,
     IconBackBulat,
     IconFavoritBlack,
-    IconMapSearch
+    IconMapSearch, 
+    IconLokasiOren,
+    IconSearch,
+    IconCancel
 }

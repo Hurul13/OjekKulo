@@ -18,7 +18,9 @@ const AddFavoritKantor = ({ navigation }) => {
   return (
     <View>
       <View>
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity onPress={() => {
+            console.log(1)
+            navigation.navigate('Home')}}>
           <IconBackPanahItem style={styles.iconpanah}></IconBackPanahItem>
         </TouchableOpacity>
         <Text style={styles.judul}>Kantor favorit</Text>

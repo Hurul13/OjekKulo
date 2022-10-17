@@ -3,17 +3,16 @@ import React from 'react'
 import {
     IconBackPanahItem,
     IconFavorit,
-    IconLokasiBiru,
     IconMapBiru,
     IconMapOren,
     IconMapPeta,
-    IconMoreGray,
-    IconPlus
+    IconSearch,
+    IconLokasiOren
 } from '../../assets'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const CariLokasi = ({ navigation }) => {
+const EditLokasi = ({ navigation }) => {
     return (
         <View>
             <View>
@@ -23,28 +22,25 @@ const CariLokasi = ({ navigation }) => {
                 }}>
                     <IconBackPanahItem style={styles.iconpanah}></IconBackPanahItem>
                 </TouchableOpacity>
-                <Text style={styles.judul}>Mau ke mana hari ini?</Text>
+                <Text style={styles.judul}>Edit Alamat</Text>
             </View>
 
             <View>
                 <View style={styles.kotakLokasi}></View>
-                <IconLokasiBiru style={styles.lokasiBiru}></IconLokasiBiru>
-                <View>
-                    <TouchableOpacity>
-                        <Text style={styles.tekLokasibiru}>Lokasi kamu sekarang</Text>
-                    </TouchableOpacity>
-                </View>
-                <Text style={styles.garisLokasi}>___________________________________________</Text>
                 <IconMapOren style={styles.lokasiOren}></IconMapOren>
                 <View>
                     <TouchableOpacity>
                         <Text style={styles.tekLokasiOren}>Cari lokasi tujuan</Text>
                     </TouchableOpacity>
                 </View>
-                <IconMoreGray style={styles.moreGray}></IconMoreGray>
+                <View>
+                    <TouchableOpacity>
+                        <IconSearch style={styles.iconSearch}></IconSearch>
+                    </TouchableOpacity>
+                </View>
             </View>
 
-            <View>
+            <View style={styles.keduaKotak}>
                 <TouchableOpacity>
                     <View>
                         <View style={styles.mapPeta}></View>
@@ -53,13 +49,15 @@ const CariLokasi = ({ navigation }) => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
-                    <View style={styles.kotakPlus}>
-                        <View style={styles.mapPeta}></View>
-                        <IconPlus style={styles.iconPlus}></IconPlus>
-                        <Text style={styles.tekPlus}>Tambah tujuan</Text>
-                    </View>
-                </TouchableOpacity>
+                <View>
+                    <TouchableOpacity>
+                        <View style={styles.kotakPlus}>
+                            <View style={styles.mapPeta}></View>
+                            <IconLokasiOren style={styles.iconLokasiOren}></IconLokasiOren>
+                            <Text style={styles.tekPlus}>Lokasimu sekarang</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
             </View>
 
             <Text style={styles.batas}>_________________________________________________________________</Text>
@@ -71,9 +69,11 @@ const CariLokasi = ({ navigation }) => {
                         <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                         <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconFavorit style={styles.iconFavorit}></IconFavorit>
-                    </TouchableOpacity>
+                    <View>
+                        <TouchableOpacity>
+                            <IconFavorit style={styles.iconFavorit}></IconFavorit>
+                        </TouchableOpacity>
+                    </View>
                     <Text style={styles.garis}>_____________________________________________________</Text>
                 </View>
                 <View style={styles.lokasi}>
@@ -82,9 +82,11 @@ const CariLokasi = ({ navigation }) => {
                         <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                         <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconFavorit style={styles.iconFavorit}></IconFavorit>
-                    </TouchableOpacity>
+                    <View>
+                        <TouchableOpacity>
+                            <IconFavorit style={styles.iconFavorit}></IconFavorit>
+                        </TouchableOpacity>
+                    </View>
                     <Text style={styles.garis}>_____________________________________________________</Text>
                 </View>
                 <View style={styles.lokasi}>
@@ -93,9 +95,11 @@ const CariLokasi = ({ navigation }) => {
                         <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                         <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconFavorit style={styles.iconFavorit}></IconFavorit>
-                    </TouchableOpacity>
+                    <View>
+                        <TouchableOpacity>
+                            <IconFavorit style={styles.iconFavorit}></IconFavorit>
+                        </TouchableOpacity>
+                    </View>
                     <Text style={styles.garis}>_____________________________________________________</Text>
                 </View>
                 <View style={styles.lokasi}>
@@ -104,9 +108,11 @@ const CariLokasi = ({ navigation }) => {
                         <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                         <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconFavorit style={styles.iconFavorit}></IconFavorit>
-                    </TouchableOpacity>
+                    <View>
+                        <TouchableOpacity>
+                            <IconFavorit style={styles.iconFavorit}></IconFavorit>
+                        </TouchableOpacity>
+                    </View>
                     <Text style={styles.garis}>_____________________________________________________</Text>
                 </View>
                 <View style={styles.lokasi}>
@@ -115,9 +121,11 @@ const CariLokasi = ({ navigation }) => {
                         <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                         <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconFavorit style={styles.iconFavorit}></IconFavorit>
-                    </TouchableOpacity>
+                    <View>
+                        <TouchableOpacity>
+                            <IconFavorit style={styles.iconFavorit}></IconFavorit>
+                        </TouchableOpacity>
+                    </View>
                     <Text style={styles.garis}>_____________________________________________________</Text>
                 </View>
                 <View style={styles.lokasi}>
@@ -126,9 +134,11 @@ const CariLokasi = ({ navigation }) => {
                         <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                         <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconFavorit style={styles.iconFavorit}></IconFavorit>
-                    </TouchableOpacity>
+                    <View>
+                        <TouchableOpacity>
+                            <IconFavorit style={styles.iconFavorit}></IconFavorit>
+                        </TouchableOpacity>
+                    </View>
                     <Text style={styles.garis}>_____________________________________________________</Text>
                 </View>
                 <View style={styles.lokasi}>
@@ -137,9 +147,11 @@ const CariLokasi = ({ navigation }) => {
                         <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                         <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconFavorit style={styles.iconFavorit}></IconFavorit>
-                    </TouchableOpacity>
+                    <View>
+                        <TouchableOpacity>
+                            <IconFavorit style={styles.iconFavorit}></IconFavorit>
+                        </TouchableOpacity>
+                    </View>
                     <Text style={styles.garis}>_____________________________________________________</Text>
                 </View>
             </View>
@@ -148,7 +160,7 @@ const CariLokasi = ({ navigation }) => {
     )
 }
 
-export default CariLokasi;
+export default EditLokasi;
 
 const styles = StyleSheet.create({
     judul: {
@@ -168,9 +180,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#E7E7E7',
         marginTop: 33,
         marginLeft: 28,
-        height: 95,
+        height: 45,
         width: 310,
-        borderRadius: 10,
+        borderRadius: 20,
         shadowColor: 'black',
         shadowOffset: {
             width: 0,
@@ -181,22 +193,8 @@ const styles = StyleSheet.create({
         //elevation: 7,
         flexDirection: 'row',
     },
-    lokasiBiru: {
-        marginTop: -75,
-        marginLeft: 43
-    },
-    tekLokasibiru: {
-        color: '#929292',
-        marginTop: -18,
-        marginLeft: 80
-    },
-    garisLokasi: {
-        marginTop: -1,
-        marginLeft: 80,
-        color: '#D9D9D9'
-    },
     lokasiOren: {
-        marginTop: 6,
+        marginTop: -33,
         marginLeft: 43
     },
     tekLokasiOren: {
@@ -204,16 +202,19 @@ const styles = StyleSheet.create({
         marginTop: -18,
         marginLeft: 80
     },
-    moreGray: {
-        marginTop: -34.5,
-        marginLeft: 50
+    iconSearch: {
+        marginTop: -19,
+        marginLeft: 300
+    },
+    keduaKotak: {
+        marginTop: -18
     },
     mapPeta: {
         //backgroundColor: '#E7E7E7',
         marginTop: 60,
         marginLeft: 28,
         height: 31,
-        width: 125,
+        width: 145,
         borderRadius: 13,
         borderWidth: 1,
         borderColor: '#D9D9D9',
@@ -237,22 +238,23 @@ const styles = StyleSheet.create({
         marginLeft: 62,
         fontSize: 13
     },
-    iconPlus: {
-        marginTop: -22,
+    iconLokasiOren: {
+        marginTop: -23,
         marginLeft: 40
     },
     tekPlus: {
         color: '#929292',
-        marginTop: -15,
+        marginTop: -16,
         marginLeft: 62,
         fontSize: 13
     },
     kotakPlus: {
         marginTop: -82,
-        marginLeft: 182
+        marginLeft: 166,
+        //height: 40,
     },
     batas: {
-        marginTop: 15,
+        marginTop: 20,
         color: '#D9D9D9'
     },
     lokasi: {

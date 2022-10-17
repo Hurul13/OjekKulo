@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ImageBackground, Dimensions, TouchableOpacity,  } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, Dimensions, TouchableOpacity, } from 'react-native'
 import React from 'react'
 import {
   ImageHeader,
@@ -45,11 +45,12 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => {
             console.log(1)
-            navigation.navigate('CariLokasi')}}>
-              <View style={styles.search}></View>
-              <Text style={styles.teksSearch}>Cari tujuan (cth : "park regency")</Text>
-              <IconMapOren style={styles.mapOren}></IconMapOren>
-        
+            navigation.navigate('CariLokasi')
+          }}>
+            <View style={styles.search}></View>
+            <Text style={styles.teksSearch}>Cari tujuan (cth : "park regency")</Text>
+            <IconMapOren style={styles.mapOren}></IconMapOren>
+
           </TouchableOpacity>
 
           <View>
@@ -98,7 +99,10 @@ const Home = ({ navigation }) => {
             <Text style={styles.tekDua}>Ada alamat yang sering dipakai? Simpan yuk, biar</Text>
             <Text style={styles.tekTiga}>gak ribet ketik alamat lagi</Text>
 
-            <TouchableOpacity onPress={() => navigation.navigate('AddFavoritAddress')}>
+            <TouchableOpacity onPress={() => {
+              console.log(1)
+              navigation.navigate('AddFavoritAddress')
+            }}>
               <View style={styles.rumah}>
                 <View style={styles.kotakFavorit}></View>
                 <Text style={styles.tekFavorit}>Simpan Rumah</Text>
@@ -106,7 +110,10 @@ const Home = ({ navigation }) => {
               </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => navigation.navigate('AddFavoritKantor')}>
+            <TouchableOpacity onPress={() => {
+              console.log(1)
+              navigation.navigate('AddFavoritKantor')
+            }}>
               <View style={styles.kantor}>
                 <View style={styles.kotakFavorit}></View>
                 <Text style={styles.tekFavorit}>Simpan Kantor</Text>

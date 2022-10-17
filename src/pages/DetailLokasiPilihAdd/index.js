@@ -11,13 +11,14 @@ import {
     IconBackBulat,
     IconFavoritBlack,
     IconMapSearch,
-    IconMapBiru
+    IconMapBiru,
+    IconCancel
 } from '../../assets'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-const DetailLokasiPilih = ({ navigation }) => {
+const DetailLokasiPilihAdd = ({ navigation }) => {
     return (
         <View>
             <TouchableOpacity onPress={() => {
@@ -47,11 +48,14 @@ const DetailLokasiPilih = ({ navigation }) => {
                 <View>
                     <IconFavoritBlack style={styles.iconFavoritBlack}></IconFavoritBlack>
                     <Text style={styles.teks}>Nama Alamat</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.teksDua}>Tempat Magang</Text>
+                    </TouchableOpacity>
                     <TouchableOpacity onPress={() => {
                         console.log(1)
-                        navigation.navigate('DetailLokasiPilihAdd')
+                        navigation.navigate('DetailLokasiPilih')
                     }}>
-                        <Text style={styles.teksDua}>Cth: Sekolah, Rumah nenek</Text>
+                        <IconCancel style={styles.iconCancel}></IconCancel>
                     </TouchableOpacity>
                 </View>
                 <TouchableOpacity>
@@ -66,7 +70,7 @@ const DetailLokasiPilih = ({ navigation }) => {
     )
 }
 
-export default DetailLokasiPilih
+export default DetailLokasiPilihAdd
 
 const styles = StyleSheet.create({
     iconBackBulat: {
@@ -129,13 +133,18 @@ const styles = StyleSheet.create({
         fontSize: 11,
     },
     teksDua: {
-        color: '#929292',
+        color: '#000000',
         marginLeft: 65,
         marginTop: 1,
         fontSize: 14,
+        fontWeight: 'bold'
+    },
+    iconCancel: {
+        marginLeft: 310,
+        marginTop: -13
     },
     search: {
-        backgroundColor: '#929292',
+        backgroundColor: '#598FF9',
         marginTop: 25,
         marginLeft: 28,
         height: 40,

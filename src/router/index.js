@@ -2,7 +2,15 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {Home, Splash, CariLokasi, AddFavoritAddress, AddFavoritKantor, DetailLokasiPilih} from '../pages';
+import {
+  Home, 
+  Splash, 
+  CariLokasi, 
+  AddFavoritAddress, 
+  AddFavoritKantor, 
+  DetailLokasiPilih, 
+  DetailLokasiPilihAdd, 
+  EditLokasi} from '../pages';
 import {BottomNavigator} from '../components/';
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +33,8 @@ function Router() {
         <Stack.Screen name="AddFavoritAddress" component={AddFavoritAddress} options={{headerShown: false}}/>
         <Stack.Screen name="AddFavoritKantor" component={AddFavoritKantor} options={{headerShown: false}}/>
         <Stack.Screen name="DetailLokasiPilih" component={DetailLokasiPilih} options={{headerShown: false}}/>
+        <Stack.Screen name="DetailLokasiPilihAdd" component={DetailLokasiPilihAdd} options={{headerShown: false}}/>
+        <Stack.Screen name="EditLokasi" component={EditLokasi} options={{headerShown: false}}/>
       </Stack.Navigator>
   );
 };
