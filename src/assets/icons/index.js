@@ -5,10 +5,12 @@ import IconFavorit from './favorit.svg'
 import IconLokasiBiru from './lokasiBiru.svg'
 import IconMapBiru from './mapBiru.svg'
 import IconMapOren from './mapOren.svg'
+import IconMapGray from './mapGray.svg'
 import IconMapPeta from './mapPeta.svg'
 import IconMore from './more.svg'
 import IconMoreGray from './moreGray.svg'
 import IconPlus from './plus.svg'
+import IconPlusGray from './plusGray.svg'
 import IconSaveHome from './saveHome.svg'
 import IconSaveKantor from './saveKantor.svg'
 import IconSetting from './setting.svg'
@@ -51,5 +53,7 @@ export {
     IconArrowAtas,
     IconFavoritBig,
     IconEdit,
-    IconPaper
+    IconPaper,
+    IconMapGray,
+    IconPlusGray
 }

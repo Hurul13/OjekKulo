@@ -7,7 +7,9 @@ import AddFavoritKantor from './AddFavoritKantor'
 import AddDataFavorit from './AddDataFavorit'
 import AddDataFavoritNote from './AddDataFavoritNote'
 import EditLokasi from './EditLokasi'
+import EditLokasiJemput from './EditLokasiJemput'
 import NextCariLokasiSatu from './NextCariLokasiSatu'
+import Voucher from './Voucher'
 
 export { 
     Home, 
@@ -18,6 +20,8 @@ export {
     AddFavoritKantor, 
     AddDataFavorit, 
     EditLokasi,
+    EditLokasiJemput,
     AddDataFavoritNote,
-    NextCariLokasiSatu
+    NextCariLokasiSatu,
+    Voucher
 }

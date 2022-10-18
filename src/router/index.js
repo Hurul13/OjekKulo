@@ -12,7 +12,9 @@ import {
   AddDataFavorit, 
   AddDataFavoritNote, 
   EditLokasi,
-  NextCariLokasiSatu
+  EditLokasiJemput,
+  NextCariLokasiSatu,
+  Voucher
 } from '../pages';
 import {BottomNavigator} from '../components/';
 
@@ -39,7 +41,9 @@ function Router() {
         <Stack.Screen name="AddDataFavorit" component={AddDataFavorit} options={{headerShown: false}}/>
         <Stack.Screen name="AddDataFavoritNote" component={AddDataFavoritNote} options={{headerShown: false}}/>
         <Stack.Screen name="EditLokasi" component={EditLokasi} options={{headerShown: false}}/>
+        <Stack.Screen name="EditLokasiJemput" component={EditLokasiJemput} options={{headerShown: false}}/>
         <Stack.Screen name="NextCariLokasiSatu" component={NextCariLokasiSatu} options={{headerShown: false}}/>
+        <Stack.Screen name="Voucher" component={Voucher} options={{headerShown: false}}/>
       </Stack.Navigator>
   );
 };

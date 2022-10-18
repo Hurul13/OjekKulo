@@ -32,31 +32,33 @@ const NextCariLokasiSatu = ({ navigation }) => {
             <View style={styles.kotakLokasi}>
                 <View>
                     <Text style={styles.teksPertama}>Cek lagi titik jemput di peta</Text>
+                    <Text style={styles.teksKedua}>Pilih lokasi strategis terdekat.</Text>
                     <TouchableOpacity>
-                        <IconEdit style={styles.iconMapSearch}></IconEdit>
+                        <IconEdit style={styles.iconEdit}></IconEdit>
                     </TouchableOpacity>
+                    <Text style={styles.batas}>________________________________________________________________</Text>
                 </View>
-                <TouchableOpacity onPress={() => {
-                    console.log(1)
-                    navigation.navigate('EditLokasi')
-                }}>
-                    <View>
+                <View style={styles.kotakFavorit}></View>
+                <View style={styles.batasJudul}>
+                    <TouchableOpacity onPress={() => {
+                        console.log(1)
+                        navigation.navigate('EditLokasi')
+                    }}>
                         <IconMapBiru style={styles.iconMapBiru}></IconMapBiru>
                         <Text style={styles.teksJudulKota}>Jl. Park Regency Blok B No.9</Text>
                         <Text style={styles.teksAlamat}>Jl. Park Regency Blok B No.9, RT.000/RW.00, Keputih,</Text>
                         <Text style={styles.teksAlamat}>Kec. Sukolilo, Kota SBY, Jawa Timur 60111, Indonesia</Text>
-                    </View>
-                </TouchableOpacity>
+                        <IconPaper style={styles.iconPaper}></IconPaper>
+                    </TouchableOpacity>
+                </View>
                 <View>
-                    <IconFavoritBlack style={styles.iconFavoritBlack}></IconFavoritBlack>
-                    <Text style={styles.teks}>Nama Alamat</Text>
                     <TouchableOpacity>
-                        <Text style={styles.teksDua}>Tempat Magang</Text>
+                        <Text style={styles.teksKetiga}>Perumahan Sukolilo Park Regency</Text>
                     </TouchableOpacity>
                 </View>
                 <TouchableOpacity>
-                    <View>
-                        <View style={styles.search}></View>
+                    <View style={styles.bottom}>
+                        <View style={styles.kotakBottom}></View>
                         <Text style={styles.tekBottom}>Tambah Alamat</Text>
                     </View>
                 </TouchableOpacity>
@@ -70,15 +72,15 @@ export default NextCariLokasiSatu
 
 const styles = StyleSheet.create({
     iconBackBulat: {
-        marginTop: 440,
+        marginTop: 410,
         marginLeft: 28
     },
     kotakLokasi: {
         backgroundColor: '#ffff',
-        marginTop: 10,
+        marginTop: 12,
         //marginLeft: 28,
-        height: 260,
-        width: 356,
+        height: 290,
+        width: 357,
         borderRadius: 10,
         shadowColor: 'black',
         shadowOffset: {
@@ -97,9 +99,43 @@ const styles = StyleSheet.create({
         marginTop: 20,
         marginLeft: 28
     },
-    iconMapSearch: {
+    teksKedua: {
+        color: 'black',
+        fontSize: 12,
+        marginTop: 1,
+        marginLeft: 28
+    },
+    iconEdit: {
         marginLeft: 310,
-        marginTop: -14
+        marginTop: -26
+    },
+    batas: {
+        marginTop: 5,
+        marginLeft: 2,
+        color: '#D9D9D9'
+    },
+    batasJudul: {
+        marginTop: -69,
+        marginLeft: 12
+    },
+     kotakFavorit: {
+        backgroundColor: '#ECEFF5',
+        marginTop: 13,
+        marginLeft: 28,
+        height: 65,
+        width: 310,
+        borderRadius: 10,
+        // borderWidth: 1,
+        // borderColor: '#D9D9D9',
+        shadowColor: 'black',
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        //elevation: 7,
+        flexDirection: 'row',
     },
     iconMapBiru: {
         marginLeft: 28,
@@ -116,7 +152,11 @@ const styles = StyleSheet.create({
         color: 'black',
         marginLeft: 65,
         marginTop: 1,
-        fontSize: 11,
+        fontSize: 10,
+    },
+    iconPaper: {
+        marginTop: -30,
+        marginLeft: 297
     },
     iconFavoritBlack: {
         marginLeft: 28,
@@ -128,10 +168,10 @@ const styles = StyleSheet.create({
         marginTop: -25,
         fontSize: 11,
     },
-    teksDua: {
+    teksKetiga: {
         color: '#000000',
-        marginLeft: 65,
-        marginTop: 1,
+        marginLeft: 78,
+        marginTop: 38,
         fontSize: 14,
         fontWeight: 'bold'
     },
@@ -139,7 +179,10 @@ const styles = StyleSheet.create({
         marginLeft: 310,
         marginTop: -13
     },
-    search: {
+    bottom: {
+        marginTop: -5
+    },
+    kotakBottom: {
         backgroundColor: '#598FF9',
         marginTop: 25,
         marginLeft: 28,
