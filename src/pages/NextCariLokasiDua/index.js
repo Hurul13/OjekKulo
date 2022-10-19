@@ -9,7 +9,10 @@ import {
 import React from 'react'
 import {
     IconBackBulat,
+    IconFavoritBlack,
+    IconMapSearch,
     IconMapBiru,
+    IconCancel,
     IconEdit,
     IconPaper
 } from '../../assets'
@@ -17,7 +20,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-const NextCariLokasiSatu = ({ navigation }) => {
+const NextCariLokasiDua = ({ navigation }) => {
     return (
         <View>
             <TouchableOpacity onPress={() => {
@@ -65,7 +68,7 @@ const NextCariLokasiSatu = ({ navigation }) => {
     )
 }
 
-export default NextCariLokasiSatu
+export default NextCariLokasiDua
 
 const styles = StyleSheet.create({
     iconBackBulat: {

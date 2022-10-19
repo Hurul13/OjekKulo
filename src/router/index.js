@@ -14,6 +14,7 @@ import {
   EditLokasi,
   EditLokasiJemput,
   NextCariLokasiSatu,
+  NextCariLokasiDua,
   Voucher
 } from '../pages';
 import {BottomNavigator} from '../components/';
@@ -43,6 +44,7 @@ function Router() {
         <Stack.Screen name="EditLokasi" component={EditLokasi} options={{headerShown: false}}/>
         <Stack.Screen name="EditLokasiJemput" component={EditLokasiJemput} options={{headerShown: false}}/>
         <Stack.Screen name="NextCariLokasiSatu" component={NextCariLokasiSatu} options={{headerShown: false}}/>
+        <Stack.Screen name="NextCariLokasiDua" component={NextCariLokasiDua} options={{headerShown: false}}/>
         <Stack.Screen name="Voucher" component={Voucher} options={{headerShown: false}}/>
       </Stack.Navigator>
   );

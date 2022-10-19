@@ -23,9 +23,11 @@ import IconSearch from './search.svg'
 import IconCancel from './cancel.svg'
 import IconArrowBawah from './arrowBawah.svg'
 import IconArrowAtas from './arrowAtas.svg'
+import IconArrowKanan from './arrowKanan.svg'
 import IconFavoritBig from './favoritBig.svg'
 import IconEdit from './edit.svg'
 import IconPaper from './paper.svg'
+import IconKaliGray from './kaliGray.svg'
 
 export { 
     IconBack, 
@@ -55,5 +57,7 @@ export {
     IconEdit,
     IconPaper,
     IconMapGray,
-    IconPlusGray
+    IconPlusGray,
+    IconKaliGray,
+    IconArrowKanan
 }

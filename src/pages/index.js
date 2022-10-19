@@ -9,6 +9,7 @@ import AddDataFavoritNote from './AddDataFavoritNote'
 import EditLokasi from './EditLokasi'
 import EditLokasiJemput from './EditLokasiJemput'
 import NextCariLokasiSatu from './NextCariLokasiSatu'
+import NextCariLokasiDua from './NextCariLokasiDua'
 import Voucher from './Voucher'
 
 export { 
@@ -23,5 +24,6 @@ export {
     EditLokasiJemput,
     AddDataFavoritNote,
     NextCariLokasiSatu,
+    NextCariLokasiDua,
     Voucher
 }
