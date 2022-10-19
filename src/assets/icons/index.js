@@ -16,6 +16,7 @@ import IconSaveKantor from './saveKantor.svg'
 import IconSetting from './setting.svg'
 import IconSavePlus from './savePlus.svg'
 import IconBackBulat from './backBulat.svg'
+import IconBackBulatKanan from './backBulatKanan.svg'
 import IconFavoritBlack from './favoritBlack.svg'
 import IconMapSearch from './mapSearch.svg'
 import IconLokasiOren from './lokasiOren.svg'
@@ -28,6 +29,9 @@ import IconFavoritBig from './favoritBig.svg'
 import IconEdit from './edit.svg'
 import IconPaper from './paper.svg'
 import IconKaliGray from './kaliGray.svg'
+import IconTime from './time.svg'
+import IconMoreBulatKotak from './moreBulatKotak.svg'
+import IconLine from './line.svg'
 
 export { 
     IconBack, 
@@ -59,5 +63,9 @@ export {
     IconMapGray,
     IconPlusGray,
     IconKaliGray,
-    IconArrowKanan
+    IconArrowKanan,
+    IconTime,
+    IconBackBulatKanan,
+    IconMoreBulatKotak,
+    IconLine,
 }
