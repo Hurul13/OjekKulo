@@ -49,11 +49,14 @@ const NextCariLokasiSatu = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
                 <View>
-                    <TouchableOpacity>
+                    <TouchableOpacity >
                         <Text style={styles.teksKetiga}>Perumahan Sukolilo Park Regency</Text>
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                        console.log(1)
+                        navigation.navigate('NextCariLokasiDua')
+                    }}>
                     <View style={styles.bottom}>
                         <View style={styles.kotakBottom}></View>
                         <Text style={styles.tekBottom}>Lanjut</Text>
@@ -115,7 +118,7 @@ const styles = StyleSheet.create({
         marginTop: -69,
         marginLeft: 12
     },
-     kotakFavorit: {
+    kotakFavorit: {
         backgroundColor: '#ECEFF5',
         marginTop: 13,
         marginLeft: 28,

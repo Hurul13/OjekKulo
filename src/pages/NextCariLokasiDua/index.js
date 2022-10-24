@@ -56,12 +56,15 @@ const NextCariLokasiDua = ({ navigation }) => {
                 </View>
             </View>
 
-            <TouchableOpacity onPress={() => {
-                console.log(1)
-                navigation.navigate('CariLokasi')
-            }}>
-                <IconBackBulat style={styles.iconBackBulat}></IconBackBulat>
-            </TouchableOpacity>
+            <View>
+                <TouchableOpacity onPress={() => {
+                    console.log(1)
+                    navigation.navigate('NextCariLokasiSatu')
+                }}>
+                    <IconBackBulat style={styles.iconBackBulat}></IconBackBulat>
+                </TouchableOpacity>
+            </View>
+
 
             <View style={styles.kotakLokasi}>
                 <IconLine style={styles.iconLine}></IconLine>
@@ -69,17 +72,42 @@ const NextCariLokasiDua = ({ navigation }) => {
 
                 <View>
                     <View style={styles.kotakFavorit}></View>
-                    <View style={styles.batasJudul}>
+                    <View style={styles.batasSatu}>
                         <TouchableOpacity onPress={() => {
                             console.log(1)
                             navigation.navigate('EditLokasi')
                         }}>
-                            <IconMapBiru style={styles.iconMapBiru}></IconMapBiru>
-                            <Text style={styles.teksJudulKota}>Jl. Park Regency Blok B No.9</Text>
-                            <Text style={styles.teksAlamat}>Jl. Park Regency Blok B No.9, RT.000/RW.00, Keputih,</Text>
-                            <Text style={styles.teksAlamat}>Kec. Sukolilo, Kota SBY, Jawa Timur 60111, Indonesia</Text>
+                            <IconMotor style={styles.iconMotor}></IconMotor>
+                            <Text style={styles.teksJudul}>GoRide</Text>
+                            <Text style={styles.teksSatu}>9-11 menit</Text>
+                            <Text style={styles.teksDua}>.</Text>
+                            <IconUser style={styles.iconUser}></IconUser>
+                            <Text style={styles.teksTiga}>1</Text>
+                            <Text style={styles.teksEmpat}>Rp 19.000</Text>
+                            <Text style={styles.garisSatu}>__________________________________________________</Text>
+
                         </TouchableOpacity>
                     </View>
+                    <View style={styles.batasDua}>
+                        <TouchableOpacity onPress={() => {
+                            console.log(1)
+                            navigation.navigate('EditLokasi')
+                        }}>
+                            <IconMobil style={styles.iconMobil}></IconMobil>
+                            <Text style={styles.teksMobilJudul}>GoCar</Text>
+                            <Text style={styles.teksMobilSatu}>3-7 menit</Text>
+                            <Text style={styles.teksMobilDua}>.</Text>
+                            <IconUser style={styles.iconUser}></IconUser>
+                            <Text style={styles.teksMobilTiga}>4</Text>
+                            <Text style={styles.teksMobilEmpat}>Rp 40.500</Text>
+                            <Text style={styles.garisSatu}>__________________________________________________</Text>
+
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+                <View>
+                    <View></View>
                 </View>
 
                 <View style={styles.kotakBgBottom}>
@@ -244,17 +272,17 @@ const styles = StyleSheet.create({
         marginTop: 1,
         marginLeft: 28
     },
-    batasJudul: {
+    batasSatu: {
         marginTop: -69,
         marginLeft: 12
     },
     kotakFavorit: {
         backgroundColor: '#ECEFF5',
         marginTop: 13,
-        marginLeft: 28,
+        //marginLeft: 28,
         height: 65,
-        width: 310,
-        borderRadius: 10,
+        width: 362,
+        //borderRadius: 0,
         // borderWidth: 1,
         // borderColor: '#D9D9D9',
         shadowColor: 'black',
@@ -267,26 +295,100 @@ const styles = StyleSheet.create({
         //elevation: 7,
         flexDirection: 'row',
     },
-    iconMapBiru: {
-        marginLeft: 28,
-        marginTop: 25
+    iconMotor: {
+        marginLeft: 22,
+        marginTop: 20
     },
-    teksJudulKota: {
+    teksJudul: {
         color: 'black',
-        marginLeft: 65,
+        marginLeft: 69,
         marginTop: -30,
         fontWeight: 'bold',
-        fontSize: 14
+        fontSize: 15
     },
-    teksAlamat: {
+    teksSatu: {
         color: 'black',
-        marginLeft: 65,
+        marginLeft: 69,
         marginTop: 1,
         fontSize: 10,
     },
+    teksDua: {
+        color: 'black',
+        marginLeft: 115,
+        marginTop: -27,
+        fontSize: 26,
+    },
+    iconUser: {
+        marginLeft: 125,
+        marginTop: -13,
+    },
+    teksTiga: {
+        color: 'black',
+        marginLeft: 137,
+        marginTop: -11,
+        fontSize: 10,
+    },
+    teksEmpat: {
+        color: 'black',
+        marginLeft: 260,
+        marginTop: -25,
+        fontSize: 15,
+        fontWeight: 'bold',
+    },
+    garisSatu: {
+        marginTop: 9,
+        marginLeft: 68,
+        //height: 220,
+        //width: 200,
+        color: '#D9D9D9',
+    },
+    batasDua: {
+        marginTop: 7,
+        marginLeft: 12
+    },
+    iconMobil: {
+        marginLeft: 22,
+        marginTop: 20
+    },
+    teksMobilJudul: {
+        color: 'black',
+        marginLeft: 69,
+        marginTop: -30,
+        fontWeight: 'bold',
+        fontSize: 15
+    },
+    teksMobilSatu: {
+        color: 'black',
+        marginLeft: 69,
+        marginTop: 1,
+        fontSize: 10,
+    },
+    teksMobilDua: {
+        color: 'black',
+        marginLeft: 115,
+        marginTop: -27,
+        fontSize: 26,
+    },
+    iconUser: {
+        marginLeft: 125,
+        marginTop: -13,
+    },
+    teksMobilTiga: {
+        color: 'black',
+        marginLeft: 137,
+        marginTop: -11,
+        fontSize: 10,
+    },
+    teksMobilEmpat: {
+        color: 'black',
+        marginLeft: 255,
+        marginTop: -25,
+        fontSize: 15,
+        fontWeight: 'bold',
+    },
     kotakBgBottom: {
         backgroundColor: '#ffff',
-        marginTop: 100,
+        marginTop: 10,
         //marginLeft: 28,
         height: 350,
         width: 358,
@@ -302,7 +404,7 @@ const styles = StyleSheet.create({
         // flexDirection: 'row',
     },
     bottom: {
-        marginTop: 30
+        marginTop: 40
     },
     kotakBottom: {
         backgroundColor: '#598FF9',
@@ -335,7 +437,7 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     iconTime: {
-        marginTop: -27,
+        marginTop: -30,
         marginLeft: 28
     },
     iconBackBulatKanan: {
