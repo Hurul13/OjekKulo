@@ -16,7 +16,12 @@ import {
     IconTime,
     IconBackBulatKanan,
     IconMoreBulatKotak,
-    IconLine
+    IconLine,
+    IconUang,
+    IconPanahKanan,
+    IconMobil,
+    IconMotor,
+    IconUser
 } from '../../assets'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -59,7 +64,7 @@ const NextCariLokasiDua = ({ navigation }) => {
             </TouchableOpacity>
 
             <View style={styles.kotakLokasi}>
-            <IconLine></IconLine>
+                <IconLine style={styles.iconLine}></IconLine>
                 <Text style={styles.teksPertama}>Mau naik apa?</Text>
 
                 <View>
@@ -79,21 +84,41 @@ const NextCariLokasiDua = ({ navigation }) => {
 
                 <View style={styles.kotakBgBottom}>
                     <View>
+
                         <View style={styles.bottom}>
                             <TouchableOpacity>
                                 <View style={styles.kotakBottom}></View>
                                 <Text style={styles.tekBottomSatu}>Pesan GoRide</Text>
                                 <Text style={styles.tekBottomDua}>Rp 17.000</Text>
+                                <IconBackBulatKanan style={styles.iconBackBulatKanan}></IconBackBulatKanan>
                             </TouchableOpacity>
                         </View>
-                        <IconTime style={styles.iconTime}></IconTime>
-                        <IconBackBulatKanan style={styles.iconBackBulatKanan}></IconBackBulatKanan>
-                        <IconMoreBulatKotak style={styles.iconMoreBulatKotak}></IconMoreBulatKotak>
+
+                        <View>
+                            <TouchableOpacity>
+                                <IconTime style={styles.iconTime}></IconTime>
+                            </TouchableOpacity>
+                        </View>
+
+                        <View>
+                            <TouchableOpacity>
+                                <IconMoreBulatKotak style={styles.iconMoreBulatKotak}></IconMoreBulatKotak>
+                            </TouchableOpacity>
+                        </View>
+
                         <View>
                             <TouchableOpacity>
                                 <View style={styles.kotakIconVoucher}>
                                     <Text style={styles.teksVoucher}>Voucher</Text>
                                 </View>
+                            </TouchableOpacity>
+                        </View>
+
+                        <View >
+                            <TouchableOpacity>
+                                <IconUang style={styles.iconUang}></IconUang>
+                                <Text style={styles.teksKetiga}>Tunai</Text>
+                                <IconPanahKanan style={styles.iconPanahKanan}></IconPanahKanan>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -182,7 +207,7 @@ const styles = StyleSheet.create({
         marginLeft: 190
     },
     iconBackBulat: {
-        marginTop: 270,
+        marginTop: 255,
         marginLeft: 28
     },
     kotakLokasi: {
@@ -201,6 +226,10 @@ const styles = StyleSheet.create({
         shadowRadius: 4.65,
         elevation: 7,
         // flexDirection: 'row',
+    },
+    iconLine: {
+        marginTop: 10,
+        marginLeft: 160
     },
     teksPertama: {
         color: 'black',
@@ -310,16 +339,16 @@ const styles = StyleSheet.create({
         marginLeft: 28
     },
     iconBackBulatKanan: {
-        marginTop: -32,
+        marginTop: -19,
         marginLeft: 291
     },
     iconMoreBulatKotak: {
-        marginTop: -72,
+        marginTop: -85,
         marginLeft: 300
     },
     kotakIconVoucher: {
-         //backgroundColor: '#E7E7E7',
-        marginTop: -27,
+        //backgroundColor: '#E7E7E7',
+        marginTop: -85,
         marginLeft: 227,
         height: 25,
         width: 63,
@@ -333,13 +362,26 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.29,
         shadowRadius: 4.65,
-        //elevation: 7,
-        flexDirection: 'row',
+        //elevation: 9,
     },
     teksVoucher: {
         color: '#929292',
         marginTop: 1,
         marginLeft: 5,
         fontSize: 16
-    }
+    },
+    iconUang: {
+        marginLeft: 28,
+        marginTop: -77,
+    },
+    teksKetiga: {
+        marginLeft: 52,
+        marginTop: -19,
+        color: 'black',
+        fontSize: 14
+    },
+    iconPanahKanan: {
+        marginTop: -13,
+        marginLeft: 90
+    },
 })

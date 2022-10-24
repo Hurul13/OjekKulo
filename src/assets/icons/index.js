@@ -32,6 +32,11 @@ import IconKaliGray from './kaliGray.svg'
 import IconTime from './time.svg'
 import IconMoreBulatKotak from './moreBulatKotak.svg'
 import IconLine from './line.svg'
+import IconUang from './uang.svg'
+import IconPanahKanan from './panahKanan.svg'
+import IconMotor from './motor.svg'
+import IconMobil from './mobil.svg'
+import IconUser from './user.svg'
 
 export { 
     IconBack, 
@@ -68,4 +73,9 @@ export {
     IconBackBulatKanan,
     IconMoreBulatKotak,
     IconLine,
+    IconUang,
+    IconPanahKanan,
+    IconMobil,
+    IconMotor,
+    IconUser
 }
