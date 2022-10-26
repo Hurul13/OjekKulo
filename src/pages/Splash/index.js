@@ -1,11 +1,13 @@
 import { ImageBackground, StyleSheet, Text, View, Image } from 'react-native'
 import React, { useEffect } from 'react'
 import { Logo, SplashBG } from '../../assets/images'
+import styles from './Styles'
+
 const Splash = ({ navigation }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('NextCariLokasiDua');
+      navigation.replace('Home');
     }, 3000);
   }, [navigation]);
 
@@ -18,19 +20,3 @@ const Splash = ({ navigation }) => {
 
 export default Splash
 
-const styles = StyleSheet.create({
-  teks: {
-    color: '#000000'
-  },
-
-  background: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
-  logo: {
-    width: 321,
-    height: 321
-  }
-})

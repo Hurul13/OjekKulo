@@ -15,7 +15,8 @@ import {
   EditLokasiJemput,
   NextCariLokasiSatu,
   NextCariLokasiDua,
-  Voucher
+  Voucher,
+  //CobaSatu
 } from '../pages';
 import {BottomNavigator} from '../components/';
 

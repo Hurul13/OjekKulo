@@ -37,6 +37,10 @@ import IconPanahKanan from './panahKanan.svg'
 import IconMotor from './motor.svg'
 import IconMobil from './mobil.svg'
 import IconUser from './user.svg'
+import IconArrowCircleBack from './arrowcircleback.svg'
+import IconBookmark from './bookmark.svg'
+import IconMapsBlue from './mapblue.svg'
+import IconMapsSearch1 from './mapsearch1.svg'
 
 export { 
     IconBack, 
@@ -77,5 +81,9 @@ export {
     IconPanahKanan,
     IconMobil,
     IconMotor,
-    IconUser
+    IconUser,
+    IconArrowCircleBack,
+    IconBookmark,
+    IconMapsBlue,
+    IconMapsSearch1
 }
