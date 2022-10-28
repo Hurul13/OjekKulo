@@ -11,6 +11,7 @@ import EditLokasiJemput from './EditLokasiJemput'
 import NextCariLokasiSatu from './NextCariLokasiSatu'
 import NextCariLokasiDua from './NextCariLokasiDua'
 import Voucher from './Voucher'
+import Peta from './Peta'
 //import CobaSatu from './CobaSatu'
 
 export { 
@@ -27,5 +28,6 @@ export {
     NextCariLokasiSatu,
     NextCariLokasiDua,
     Voucher,
+    Peta
     //CobaSatu
 }

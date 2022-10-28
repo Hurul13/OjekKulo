@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {BottomNavigator} from '../components/';
 import {
   Home, 
   Splash, 
@@ -16,9 +17,9 @@ import {
   NextCariLokasiSatu,
   NextCariLokasiDua,
   Voucher,
+  Peta,
   //CobaSatu
 } from '../pages';
-import {BottomNavigator} from '../components/';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -47,6 +48,7 @@ function Router() {
         <Stack.Screen name="NextCariLokasiSatu" component={NextCariLokasiSatu} options={{headerShown: false}}/>
         <Stack.Screen name="NextCariLokasiDua" component={NextCariLokasiDua} options={{headerShown: false}}/>
         <Stack.Screen name="Voucher" component={Voucher} options={{headerShown: false}}/>
+        <Stack.Screen name="Peta" component={Peta} options={{headerShown: false}}/>
       </Stack.Navigator>
   );
 };
