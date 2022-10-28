@@ -41,6 +41,7 @@ import IconArrowCircleBack from './arrowcircleback.svg'
 import IconBookmark from './bookmark.svg'
 import IconMapsBlue from './mapblue.svg'
 import IconMapsSearch1 from './mapsearch1.svg'
+import IconCekList from './cekList'
 
 export { 
     IconBack, 
@@ -85,5 +86,6 @@ export {
     IconArrowCircleBack,
     IconBookmark,
     IconMapsBlue,
-    IconMapsSearch1
+    IconMapsSearch1,
+    IconCekList
 }

@@ -12,10 +12,10 @@ import {
     IconBackBulat,
     IconMapBiru,
     IconEdit,
-    IconPaper, 
-    IconArrowCircleBack, 
-    IconBookmark, 
-    IconMapsBlue, 
+    IconPaper,
+    IconArrowCircleBack,
+    IconBookmark,
+    IconMapsBlue,
     IconMapsSearch1
 } from '../../assets'
 import styles from './Styles'

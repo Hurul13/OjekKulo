@@ -8,16 +8,17 @@ import {
   Alert
 } from 'react-native'
 import React, { useState } from 'react'
-// import {
-//     IconBackBulat,
-//     IconMapBiru,
-//     IconEdit,
-//     IconPaper, 
-//     IconArrowCircleBack, 
-//     IconBookmark, 
-//     IconMapsBlue, 
-//     IconMapsSearch1
-// } from '../../assets'
+import {
+    IconBackBulat,
+    IconMapBiru,
+    IconEdit,
+    IconPaper, 
+    IconArrowCircleBack, 
+    IconBookmark, 
+    IconMapsBlue, 
+    IconMapsSearch1,
+    IconCekList
+} from '../../assets'
 import styles from './Styles'
 import { LatLng, LeafletView } from 'react-native-leaflet-view';
 import { NavigationContainer } from '@react-navigation/native';
@@ -75,6 +76,7 @@ const Peta = ({ navigation }) => {
         zoom={16}
         doDebug={false}
       />
+      <IconCekList style={styles.iconCekList}></IconCekList>
     </View>
   )
 }

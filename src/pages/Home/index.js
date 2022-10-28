@@ -10,7 +10,8 @@ import {
   IconBackPanah,
   IconSavePlus,
   IconSaveHome,
-  IconSaveKantor
+  IconSaveKantor,
+  IconCekList
 } from '../../assets'
 import styles from './Styles'
 import { LatLng, LeafletView } from 'react-native-leaflet-view';
@@ -94,10 +95,7 @@ const Home = ({ navigation }) => {
               />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => {
-            console.log(1)
-            navigation.navigate('CariLokasi')
-          }}>
+          <TouchableOpacity onPress={() => navigateTo('CariLokasi')}>
             <View style={styles.search}></View>
             <Text style={styles.teksSearch}>Cari tujuan (cth : "park regency")</Text>
             <IconMapOren style={styles.mapOren}></IconMapOren>
@@ -150,10 +148,7 @@ const Home = ({ navigation }) => {
             <Text style={styles.tekDua}>Ada alamat yang sering dipakai? Simpan yuk, biar</Text>
             <Text style={styles.tekTiga}>gak ribet ketik alamat lagi</Text>
 
-            <TouchableOpacity onPress={() => {
-              console.log(1)
-              navigation.navigate('AddFavoritAddress')
-            }}>
+            <TouchableOpacity onPress={() => navigateTo('AddFavoritAddress')}>
               <View style={styles.rumah}>
                 <View style={styles.kotakFavorit}></View>
                 <Text style={styles.tekFavorit}>Simpan Rumah</Text>
@@ -161,10 +156,7 @@ const Home = ({ navigation }) => {
               </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => {
-              console.log(1)
-              navigation.navigate('AddFavoritKantor')
-            }}>
+            <TouchableOpacity onPress={() => navigateTo('AddFavoritKantor')}>
               <View style={styles.kantor}>
                 <View style={styles.kotakFavorit}></View>
                 <Text style={styles.tekFavorit}>Simpan Kantor</Text>

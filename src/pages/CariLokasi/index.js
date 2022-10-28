@@ -15,6 +15,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const CariLokasi = ({ navigation }) => {
+    const navigateTo = async (page) => {
+        navigation.navigate(page)
+    }
+    
     return (
         <View>
             <View>
@@ -67,7 +71,7 @@ const CariLokasi = ({ navigation }) => {
 
             <View>
                 <View style={styles.lokasi}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigateTo('NextCariLokasiSatu')} >
                         <IconMapBiru style={styles.mapBiru}></IconMapBiru>
                         <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                         <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
