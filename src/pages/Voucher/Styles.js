@@ -4,6 +4,9 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
+    page: {
+        flex: 1
+    },
     header: {
         width: windowWidth,
         height: windowHeight * 0.34

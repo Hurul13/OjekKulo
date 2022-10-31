@@ -22,10 +22,7 @@ const CariLokasi = ({ navigation }) => {
     return (
         <View>
             <View>
-                <TouchableOpacity onPress={() => {
-                    console.log(1)
-                    navigation.navigate('Home')
-                }}>
+                <TouchableOpacity onPress={() => navigateTo('Home')}>
                     <IconBackPanahItem style={styles.iconpanah}></IconBackPanahItem>
                 </TouchableOpacity>
                 <Text style={styles.judul}>Mau ke mana hari ini?</Text>

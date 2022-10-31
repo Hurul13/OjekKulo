@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
     },
     header: {
         width: windowWidth,
-        height: windowHeight * 0.34
+        height: windowHeight * 0.34,
+        resizeMode: 'cover',
     },
     hello: {
         marginTop: 40,

@@ -1,6 +1,9 @@
 import { Dimensions, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    page: {
+        flex: 1
+    },
     iconBackBulat: {
         marginTop: 440,
         marginLeft: 28

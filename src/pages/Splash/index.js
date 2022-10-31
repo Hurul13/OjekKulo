@@ -4,6 +4,9 @@ import { Logo, SplashBG } from '../../assets/images'
 import styles from './Styles'
 
 const Splash = ({ navigation }) => {
+  const navigateTo = async (page) => {
+    navigation.navigate(page)
+  }
 
   useEffect(() => {
     setTimeout(() => {

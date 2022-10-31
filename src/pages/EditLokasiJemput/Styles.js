@@ -1,6 +1,9 @@
 import { Dimensions, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    page: {
+        flex: 1
+    },
     judul: {
         color: 'black',
         textAlign: 'center',

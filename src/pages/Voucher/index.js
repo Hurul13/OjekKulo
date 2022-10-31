@@ -13,14 +13,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Voucher = ({ navigation }) => {
+    const navigateTo = async (page) => {
+    navigation.navigate(page)
+  }
     return (
         <View>
             <ImageBackground source={BgVoucher} style={styles.header}>
                 <View>
-                    <TouchableOpacity onPress={() => {
-                        console.log(1)
-                        navigation.navigate('Home')
-                    }}>
+                    <TouchableOpacity onPress={() => navigateTo('Home')}>
                         <IconBack style={styles.iconpanah}></IconBack>
                     </TouchableOpacity>
                     <Text style={styles.judul}>Voucher</Text>

@@ -20,12 +20,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 const AddDataFavoritNote = ({ navigation }) => {
+    const navigateTo = async (page) => {
+    navigation.navigate(page)
+  }
+
     return (
         <View>
-            <TouchableOpacity onPress={() => {
-                console.log(1)
-                navigation.navigate('CariLokasi')
-            }}>
+            <TouchableOpacity onPress={() => navigateTo('CariLokasi')}>
                 <IconBackBulat style={styles.iconBackBulat}></IconBackBulat>
             </TouchableOpacity>
             <View style={styles.kotakLokasi}>
@@ -35,10 +36,7 @@ const AddDataFavoritNote = ({ navigation }) => {
                         <IconMapSearch style={styles.iconMapSearch}></IconMapSearch>
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity onPress={() => {
-                    console.log(1)
-                    navigation.navigate('EditLokasi')
-                }}>
+                <TouchableOpacity onPress={() => navigateTo('EditLokasi')}>
                     <View>
                         <IconMapBiru style={styles.iconMapBiru}></IconMapBiru>
                         <Text style={styles.teksJudulKota}>Jl. Park Regency Blok B No.9</Text>
@@ -52,10 +50,7 @@ const AddDataFavoritNote = ({ navigation }) => {
                     <TouchableOpacity>
                         <Text style={styles.teksDua}>Tempat Magang</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => {
-                        console.log(1)
-                        navigation.navigate('AddDataFavorit')
-                    }}>
+                    <TouchableOpacity onPress={() => navigateTo('AddDataFavorit')}>
                         <IconCancel style={styles.iconCancel}></IconCancel>
                     </TouchableOpacity>
                 </View>

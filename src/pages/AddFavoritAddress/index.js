@@ -9,12 +9,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const AddFavoritAddress = ({ navigation }) => {
+  const navigateTo = async (page) => {
+    navigation.navigate(page)
+  }
+
   return (
     <View>
       <View>
-        <TouchableOpacity onPress={() => {
-            console.log(1)
-            navigation.navigate('Home')}}>
+        <TouchableOpacity onPress={() => navigateTo('Home')}>
           <IconBackPanahItem style={styles.iconpanah}></IconBackPanahItem>
         </TouchableOpacity>
         <Text style={styles.judul}>Alamat favorit</Text>

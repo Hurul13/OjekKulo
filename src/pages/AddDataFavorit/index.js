@@ -19,12 +19,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 const AddDataFavorit = ({ navigation }) => {
+    const navigateTo = async (page) => {
+        navigation.navigate(page)
+    }
+
     return (
         <View>
-            <TouchableOpacity onPress={() => {
-                console.log(1)
-                navigation.navigate('CariLokasi')
-            }}>
+            <TouchableOpacity onPress={() => navigateTo('CariLokasi')}>
                 <IconBackBulat style={styles.iconBackBulat}></IconBackBulat>
             </TouchableOpacity>
             <View style={styles.kotakLokasi}>
@@ -34,10 +35,7 @@ const AddDataFavorit = ({ navigation }) => {
                         <IconMapSearch style={styles.iconMapSearch}></IconMapSearch>
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity onPress={() => {
-                    console.log(1)
-                    navigation.navigate('EditLokasi')
-                }}>
+                <TouchableOpacity onPress={() => navigateTo('EditLokasi')}>
                     <View>
                         <IconMapBiru style={styles.iconMapBiru}></IconMapBiru>
                         <Text style={styles.teksJudulKota}>Jl. Park Regency Blok B No.9</Text>
@@ -48,10 +46,7 @@ const AddDataFavorit = ({ navigation }) => {
                 <View>
                     <IconFavoritBlack style={styles.iconFavoritBlack}></IconFavoritBlack>
                     <Text style={styles.teks}>Nama Alamat</Text>
-                    <TouchableOpacity onPress={() => {
-                        console.log(1)
-                        navigation.navigate('AddDataFavoritNote')
-                    }}>
+                    <TouchableOpacity onPress={() => navigateTo('AddDataFavoritNote')}>
                         <Text style={styles.teksDua}>Cth: Sekolah, Rumah nenek</Text>
                     </TouchableOpacity>
                 </View>

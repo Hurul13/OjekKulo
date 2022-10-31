@@ -33,6 +33,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 const NextCariLokasiDua = ({ navigation }) => {
+    const navigateTo = async (page) => {
+    navigation.navigate(page)
+  }
+
     return (
         <View>
             <Modal isVisible={true}>
@@ -67,10 +71,7 @@ const NextCariLokasiDua = ({ navigation }) => {
             </View>
 
             <View>
-                <TouchableOpacity onPress={() => {
-                    console.log(1)
-                    navigation.navigate('NextCariLokasiSatu')
-                }}>
+                <TouchableOpacity onPress={() => navigateTo('NextCariLokasiSatu')}>
                     <IconBackBulat style={styles.iconBackBulat}></IconBackBulat>
                 </TouchableOpacity>
             </View>
@@ -83,10 +84,7 @@ const NextCariLokasiDua = ({ navigation }) => {
                 <View>
                     <View style={styles.kotakFavorit}></View>
                     <View style={styles.batasSatu}>
-                        <TouchableOpacity onPress={() => {
-                            console.log(1)
-                            navigation.navigate('EditLokasi')
-                        }}>
+                        <TouchableOpacity oonPress={() => navigateTo('EditLokasi')}>
                             <IconMotor style={styles.iconMotor}></IconMotor>
                             <Text style={styles.teksJudul}>GoRide</Text>
                             <Text style={styles.teksSatu}>9-11 menit</Text>
@@ -99,10 +97,7 @@ const NextCariLokasiDua = ({ navigation }) => {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.batasDua}>
-                        <TouchableOpacity onPress={() => {
-                            console.log(1)
-                            navigation.navigate('EditLokasi')
-                        }}>
+                        <TouchableOpacity onPress={() => navigateTo('EditLokasi')}>
                             <IconMobil style={styles.iconMobil}></IconMobil>
                             <Text style={styles.teksMobilJudul}>GoCar</Text>
                             <Text style={styles.teksMobilSatu}>3-7 menit</Text>
