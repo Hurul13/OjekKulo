@@ -11,13 +11,16 @@ const styles = StyleSheet.create({
         marginTop: 450,
     },
     back: {
-        marginLeft: 25,
+        marginLeft: 10,
+        width: windowWidth * .08,
+        // backgroundColor: '#000'
     },
     footer: {
-        backgroundColor: '#fff',
+        backgroundColor: '#ffff',
         width: windowWidth,
-        height: windowWidth * .85,
-        borderRadius: 35,
+        height: windowWidth * .75,
+        borderTopLeftRadius: 35,
+        borderTopRightRadius: 35,
         shadowColor: 'black',
         shadowOffset: {
             width: 0,
@@ -49,54 +52,60 @@ const styles = StyleSheet.create({
     },
     iconmapblue: {
         marginTop: 20,
-        marginLeft: 10,
+        marginLeft: 5,
     },
     textaddresstop: {
         marginTop: 15,
         fontWeight: 'bold',
         marginLeft: 13,
+        paddingHorizontal: 5,
         color: '#000'
     },
-    textaddressbottom: {
-        marginLeft: 38,
-        marginTop: 5,
-        fontSize: 11,
-        color: '#929292',
-    },
-    textaddressbottom1: {
-        marginLeft: 38,
-        fontSize: 11,
-        color: '#929292'
-    },
+    // textaddressbottom: {
+    //     marginLeft: 38,
+    //     marginTop: 5,
+    //     fontSize: 11,
+    //     color: '#929292',
+    // },
+    // textaddressbottom1: {
+    //     marginLeft: 38,
+    //     fontSize: 11,
+    //     color: '#929292'
+    // },
     save: {
         flexDirection: 'row',
         marginTop: 15,
     },
     iconsave: {
-        marginLeft: 10,
+        marginLeft: 5,
     },
     textsavetop: {
         color: '#000',
         marginLeft: 16,
+        paddingHorizontal: 5,
     },
     textsavebottom: {
-        color: '#929292',
-        marginLeft: 37,
-        marginTop: 3,
+        marginLeft: 32,
+        marginTop: -10,
+        paddingHorizontal: 5,
+        color: '#000000',
+        borderBottomColor: '#000',
+        borderBottomWidth: 1,
+        borderStyle: 'solid',
     },
     line: {
         color: '#B3B3B3',
-        marginTop: -10,
+        marginTop: -20,
         marginLeft: 37
     },
-    button: {
-        backgroundColor: '#929292',
+    button: (formAlreadyFilled) => ({
+        backgroundColor: formAlreadyFilled ? '#598FF9' : '#929292',
         width: windowWidth * .9,
         height: windowWidth * .1,
         borderRadius: 100,
         marginTop: 22,
         marginLeft: -10
-    },
+    }),
     textButton: {
         color: '#fff',
         fontWeight: 'bold',

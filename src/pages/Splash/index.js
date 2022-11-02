@@ -10,7 +10,7 @@ const Splash = ({ navigation }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('Home');
+      navigation.replace('NextCariLokasiDua');
     }, 3000);
   }, [navigation]);
 

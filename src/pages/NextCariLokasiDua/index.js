@@ -25,23 +25,52 @@ import {
     IconPanahKanan,
     IconMobil,
     IconMotor,
-    IconUser
+    IconUser,
+    IconX,
+    IconJamBlack,
+    IconJamGray,
+    IconDateBlack,
+    IconDateGray,
 } from '../../assets'
 import styles from './Styles'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-const NextCariLokasiDua = ({ navigation }) => {
+const NextCariLokasiDua = ({ navigation, isActive = true }) => {
     const navigateTo = async (page) => {
-    navigation.navigate(page)
-  }
+        navigation.navigate(page)
+    }
+
+    const [modal, setModal] = useState(false);
+
+    const [text, setText] = useState('');
 
     return (
         <View>
-            <Modal isVisible={true}>
-                <View style={{ flex: 1 }}>
-                    <Text>I am the modal content!</Text>
+            <Modal isVisible={modal}>
+                <View style={styles.kotakModal1}>
+                    <View>
+                        <TouchableOpacity onPress={() => setModal(false)}>
+                            <IconX style={styles.iconX}></IconX>
+                        </TouchableOpacity>
+                        <Text style={styles.textModal1}>Jadwalkan Perjalanan</Text>
+                        <Text style={styles.line}>____________________________________________________</Text>
+                    </View>
+                    <View>
+                        <IconDateGray style={styles.iconDateGray}></IconDateGray>
+                        <Text style={styles.textModal2}>Pilih Tanggal</Text>
+                        <Text style={styles.line1}>________________________________________________</Text>
+                    </View>
+                    <View>
+                        <IconJamGray style={styles.iconJamGray}></IconJamGray>
+                        <Text style={styles.textModal3}>Pilih Waktu</Text>
+                        <Text style={styles.line}>____________________________________________________</Text>
+                    </View>
+                    <Text style={styles.textModal4}>Tanggal dan waktu akan mengiikuti zona waktu tempat penjemputanmu.</Text>
+                    <TouchableOpacity isVisible={isActive} style={styles.button(text)} onPress={() => navigateTo('EditAddress')}>
+                        <Text style={styles.textButton}>Simpan</Text>
+                    </TouchableOpacity>
                 </View>
             </Modal>
             <View>
@@ -128,7 +157,7 @@ const NextCariLokasiDua = ({ navigation }) => {
                         </View>
 
                         <View>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => setModal(true)}>
                                 <IconTime style={styles.iconTime}></IconTime>
                             </TouchableOpacity>
                         </View>

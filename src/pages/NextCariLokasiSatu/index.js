@@ -1,11 +1,7 @@
 import {
-    StyleSheet,
     Text,
     View,
-    ImageBackground,
-    Dimensions,
     TouchableOpacity,
-    Alert
 } from 'react-native'
 import React, { useState } from 'react'
 import {
@@ -20,11 +16,12 @@ import {
 } from '../../assets'
 import styles from './Styles'
 import { LatLng, LeafletView } from 'react-native-leaflet-view';
+import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
-const NextCariLokasiSatu = ({ navigation }) => {
+const NextCariLokasiSatu = ({ navigation, isActive = true }) => {
     const navigateTo = async (page) => {
         navigation.navigate(page)
     }
@@ -60,55 +57,67 @@ const NextCariLokasiSatu = ({ navigation }) => {
         }
     }
 
+    const [text, setText] = useState('');
+
     return (
-        <View style={styles.page}>
-            <LeafletView
-                mapMarkers={[
-                    {
-                        position: coordinate,
-                        icon: '📍',
-                        size: [32, 32],
-                    },
-                ]}
-                onMessageReceived={onMessageReceived}
-                mapCenterPosition={coordinateCenter}
-                zoom={16}
-                doDebug={false}
-            />
-            <View style={styles.container}>
-                <TouchableOpacity onPress={() => navigateTo('app-favaddress')}>
-                    <IconArrowCircleBack style={styles.back} />
-                </TouchableOpacity>
-                <View style={styles.footer}>
-                    <View style={styles.header}>
-                        <Text style={styles.judul}>Tambah Alamat</Text>
-                        <TouchableOpacity onPress={() => navigateTo('EditAddress')}>
-                            <IconMapsSearch1 style={styles.iconmapssearch} />
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.address}>
-                        <IconMapsBlue style={styles.iconmapblue} />
-                        <Text style={styles.textaddresstop}>{currentLocation}</Text>
-                    </View>
-                    {/* <Text style={styles.textaddressbottom}>Jl. Park Regency Blok B No.9, RT.000/RW.00, Keputih, Kec.</Text>
+        <ScrollView>
+            <View style={styles.page}>
+                <LeafletView
+                    mapMarkers={[
+                        {
+                            position: coordinate,
+                            icon: '📍',
+                            size: [32, 32],
+                        },
+                    ]}
+                    onMessageReceived={onMessageReceived}
+                    mapCenterPosition={coordinateCenter}
+                    zoom={16}
+                    doDebug={false}
+                />
+                <View style={styles.container}>
+                    <TouchableOpacity onPress={() => navigateTo('app-favaddress')}>
+                        <IconBackBulat style={styles.back} />
+                    </TouchableOpacity>
+                    <View style={styles.footer}>
+                        <View style={styles.header}>
+                            <Text style={styles.judul}>Tambah Alamat</Text>
+                            <TouchableOpacity onPress={() => navigateTo('EditAddress')}>
+                                <IconMapsSearch1 style={styles.iconmapssearch} />
+                            </TouchableOpacity>
+                        </View>
+                        <View style={styles.address}>
+                            <IconMapsBlue style={styles.iconmapblue} />
+                            <Text style={styles.textaddresstop}>{currentLocation}</Text>
+                        </View>
+                        {/* <Text style={styles.textaddressbottom}>Jl. Park Regency Blok B No.9, RT.000/RW.00, Keputih, Kec.</Text>
                     <Text style={styles.textaddressbottom1}>Sukolilo, Kota SBY, Jawa Timur 60111, Indonesia</Text> */}
-                    <View style={styles.save}>
-                        <IconBookmark style={styles.iconsave} />
-                        <Text style={styles.textsavetop}>Nama alamat</Text>
-                    </View>
-                    <Text style={styles.textsavebottom}>Cth: Sekolah, Rumah nenek</Text>
-                    <Text style={styles.line}>________________</Text>
-                    <View style={styles.button}>
-                        <Text style={styles.textButton}>Simpan</Text>
+                        <View style={styles.save}>
+                            <IconBookmark style={styles.iconsave} />
+                            <Text style={styles.textsavetop}>Nama alamat</Text>
+                        </View>
+
+                        {/* <Text style={styles.textsavebottom}>Cth: Sekolah, Rumah nenek</Text> */}
+
+                        <TextInput
+                            style={styles.textsavebottom}
+                            onChangeText={newText => setText(newText)}
+                            placeholder='Cth: Sekolah, Rumah nenek'
+                            placeholderTextColor="#000"
+                            value={text}
+                        />
+
+                        {/* <Text style={styles.line}>________________</Text> */}
+                        <TouchableOpacity isVisible={isActive} style={styles.button(text)} onPress={() => navigateTo('EditAddress')}>
+                            <Text style={styles.textButton}>Simpan</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
 export default NextCariLokasiSatu
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeigth = Dimensions.get('window').height;
 

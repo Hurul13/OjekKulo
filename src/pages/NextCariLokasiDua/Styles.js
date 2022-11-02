@@ -1,5 +1,8 @@
 import { Dimensions, StyleSheet } from "react-native";
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeigth = Dimensions.get('window').height;
+
 const styles = StyleSheet.create({
     page: {
         flex: 1
@@ -20,6 +23,7 @@ const styles = StyleSheet.create({
         shadowRadius: 4.65,
         //elevation: 7,
         flexDirection: 'row',
+        resizeMode: 'cover',
     },
     lokasiBiru: {
         marginTop: -58,
@@ -328,6 +332,80 @@ const styles = StyleSheet.create({
     iconPanahKanan: {
         marginTop: -13,
         marginLeft: 90
+    },
+
+    // buat modal jam
+
+    kotakModal1: {
+        //flex: 1,
+        backgroundColor: "#ffff",
+        marginTop: 430,
+        marginRight: 0,
+        height: 265,
+        borderRadius: 10,
+    },
+    iconX: {
+        marginLeft: 20,
+        marginTop: 20
+    },
+    textModal1: {
+        color: '#000',
+        marginTop : -17.5,
+        marginLeft: 58,
+        fontSize: 17,
+        fontWeight: 'bold',
+    },
+    line: {
+        color: '#DBDBDB',
+        marginTop: 5
+    },
+    iconDateGray: {
+        marginLeft: 20,
+        marginTop: 13,
+    },
+    textModal2: {
+        color: '#DBDBDB',
+        marginTop : -19,
+        marginLeft: 58,
+        fontSize: 14,
+        //fontWeight: 'bold',
+    },
+    line1: {
+        color: '#DBDBDB',
+        marginTop: 5,
+        marginLeft: 20
+    },
+    iconJamGray: {
+        marginLeft: 20,
+        marginTop: 13
+    },
+    textModal3: {
+        color: '#DBDBDB',
+        marginTop : -21,
+        marginLeft: 58,
+        fontSize: 14,
+        //fontWeight: 'bold',
+    },
+    textModal4: {
+        color: '#000',
+        marginTop : 6,
+        marginLeft: 28,
+        fontSize: 9,
+        //fontWeight: 'bold',
+    },
+    button: (formAlreadyFilled) => ({
+        backgroundColor: formAlreadyFilled ? '#598FF9' : '#929292',
+        width: windowWidth * .8,
+        height: windowWidth * .1,
+        borderRadius: 100,
+        marginTop: 22,
+        marginLeft: 18
+    }),
+    textButton: {
+        color: '#fff',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 8,
     },
 })
 
