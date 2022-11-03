@@ -5,13 +5,14 @@ import {
     ImageBackground,
     Dimensions,
     TouchableOpacity,
-
+    Alert
 } from 'react-native'
 import React, {
     useState,
     useEffect
 } from 'react'
 import Modal from "react-native-modal";
+import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 import {
     IconBackBulat,
     IconLokasiBiru,
@@ -33,11 +34,14 @@ import {
     IconDateGray,
 } from '../../assets'
 import styles from './Styles'
+import {ModalDateTimePicker } from '../../components';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 const NextCariLokasiDua = ({ navigation, isActive = true }) => {
+    const [isModalActive, setIsModalActive] = useState(false);
+
     const navigateTo = async (page) => {
         navigation.navigate(page)
     }
@@ -46,9 +50,13 @@ const NextCariLokasiDua = ({ navigation, isActive = true }) => {
 
     const [text, setText] = useState('');
 
+    const openModal = () => {
+        setIsModalActive(true);
+    }
+
     return (
         <View>
-            <Modal isVisible={modal}>
+            {/* <Modal isVisible={modal}>
                 <View style={styles.kotakModal1}>
                     <View>
                         <TouchableOpacity onPress={() => setModal(false)}>
@@ -72,7 +80,7 @@ const NextCariLokasiDua = ({ navigation, isActive = true }) => {
                         <Text style={styles.textButton}>Simpan</Text>
                     </TouchableOpacity>
                 </View>
-            </Modal>
+            </Modal> */}
             <View>
                 <View style={styles.kotakAlamat}></View>
                 <IconLokasiBiru style={styles.lokasiBiru}></IconLokasiBiru>
@@ -157,7 +165,7 @@ const NextCariLokasiDua = ({ navigation, isActive = true }) => {
                         </View>
 
                         <View>
-                            <TouchableOpacity onPress={() => setModal(true)}>
+                            <TouchableOpacity onPress={() => openModal(true)}>
                                 <IconTime style={styles.iconTime}></IconTime>
                             </TouchableOpacity>
                         </View>
@@ -185,6 +193,7 @@ const NextCariLokasiDua = ({ navigation, isActive = true }) => {
                         </View>
                     </View>
                 </View>
+                {/* <DateTimePickerAndroid/> */}
 
             </View>
 

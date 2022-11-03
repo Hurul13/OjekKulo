@@ -12,6 +12,7 @@ import NextCariLokasiSatu from './NextCariLokasiSatu'
 import NextCariLokasiDua from './NextCariLokasiDua'
 import Voucher from './Voucher'
 import Peta from './Peta'
+// import ModalDateTimePicker from './ModalDateTimePicker'
 //import CobaSatu from './CobaSatu'
 
 export { 
@@ -28,6 +29,7 @@ export {
     NextCariLokasiSatu,
     NextCariLokasiDua,
     Voucher,
-    Peta
+    Peta,
+    // ModalDateTimePicker
     //CobaSatu
 }

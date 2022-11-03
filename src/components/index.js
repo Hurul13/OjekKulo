@@ -1,3 +1,4 @@
 import BottomNavigator from "./BottomNavigator";
+import ModalDateTimePicker from "./ModalDateTimePicker";
 
-export {BottomNavigator}
+export {BottomNavigator, ModalDateTimePicker}

@@ -18,6 +18,7 @@ import {
   NextCariLokasiDua,
   Voucher,
   Peta,
+  //ModalDateTimePicker
   //CobaSatu
 } from '../pages';
 
@@ -49,6 +50,7 @@ function Router() {
         <Stack.Screen name="NextCariLokasiDua" component={NextCariLokasiDua} options={{headerShown: false}}/>
         <Stack.Screen name="Voucher" component={Voucher} options={{headerShown: false}}/>
         <Stack.Screen name="Peta" component={Peta} options={{headerShown: false}}/>
+        {/* <Stack.Screen name="ModalDateTimePicker" component={ModalDateTimePicker} options={{headerShown: false}}/> */}
       </Stack.Navigator>
   );
 };
