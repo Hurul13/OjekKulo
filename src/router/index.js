@@ -7,11 +7,11 @@ import {
   Home,
   Splash,
   CariLokasi,
-  AddFavoritAddress,
-  IsiFavoritAddress,
-  AddFavoritKantor,
-  AddDataFavorit,
-  AddDataFavoritNote,
+  // AddFavoritAddress,
+  // IsiFavoritAddress,
+  // AddFavoritKantor,
+  // AddDataFavorit,
+  // AddDataFavoritNote,
   EditLokasi,
   EditLokasiJemput,
   NextCariLokasiSatu,
@@ -19,6 +19,9 @@ import {
   NextCariLokasiDuaSalah,
   Voucher,
   Peta,
+  AddAddress,
+  SearchSaveAddress,
+  DataSaveAddress,
   // BottomSheetOjek,
   //ModalDateTimePicker
   //CobaSatu
@@ -53,17 +56,17 @@ function Router() {
         component={Home}
         options={{headerShown: false}}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="AddFavoritAddress"
         component={AddFavoritAddress}
         options={{headerShown: false}}
-      />
-      <Stack.Screen
+      /> */}
+      {/* <Stack.Screen
         name="IsiFavoritAddress"
         component={IsiFavoritAddress}
         options={{headerShown: false}}
-      />
-      <Stack.Screen
+      /> */}
+      {/* <Stack.Screen
         name="AddFavoritKantor"
         component={AddFavoritKantor}
         options={{headerShown: false}}
@@ -77,7 +80,7 @@ function Router() {
         name="AddDataFavoritNote"
         component={AddDataFavoritNote}
         options={{headerShown: false}}
-      />
+      /> */}
       <Stack.Screen
         name="EditLokasi"
         component={EditLokasi}
@@ -113,11 +116,21 @@ function Router() {
         component={Peta}
         options={{headerShown: false}}
       />
-      {/* <Stack.Screen
-        name="BottomSheetOjek"
-        component={BottomSheetOjek}
+      <Stack.Screen
+        name="SearchSaveAddress"
+        component={SearchSaveAddress}
         options={{headerShown: false}}
-      /> */}
+      />
+      <Stack.Screen
+        name="AddAddress"
+        component={AddAddress}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="DataSaveAddress"
+        component={DataSaveAddress}
+        options={{headerShown: false}}
+      />
       {/* <Stack.Screen name="ModalDateTimePicker" component={ModalDateTimePicker} options={{headerShown: false}}/> */}
     </Stack.Navigator>
   );

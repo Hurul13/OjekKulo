@@ -9,15 +9,15 @@ import {
 } from 'react-native'
 import React, { useState } from 'react'
 import {
-    IconBackBulat,
-    IconMapBiru,
-    IconEdit,
-    IconPaper, 
-    IconArrowCircleBack, 
-    IconBookmark, 
-    IconMapsBlue, 
-    IconMapsSearch1,
-    IconCekList
+  IconBackBulat,
+  IconMapBiru,
+  IconEdit,
+  IconPaper,
+  IconArrowCircleBack,
+  IconBookmark,
+  IconMapsBlue,
+  IconMapsSearch1,
+  IconCekList
 } from '../../assets'
 import styles from './Styles'
 import { LatLng, LeafletView } from 'react-native-leaflet-view';
@@ -76,9 +76,11 @@ const Peta = ({ navigation }) => {
         zoom={16}
         doDebug={false}
       />
-      <IconCekList style={styles.iconCekList}></IconCekList>
+      <TouchableOpacity onPress={() => navigateTo('Home')}>
+        <IconCekList style={styles.iconCekList}></IconCekList>
+      </TouchableOpacity>
     </View>
-  )
+  );
 }
 
 export default Peta

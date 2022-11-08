@@ -108,8 +108,6 @@ const Home = ({ navigation }) => {
                 <IconMapBiru style={styles.mapBiru}></IconMapBiru>
                 <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                 <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
-              </TouchableOpacity>
-              <TouchableOpacity>
                 <IconBackPanah style={styles.backPanah}></IconBackPanah>
               </TouchableOpacity>
               <Text style={styles.garis}>_______________________________________________</Text>
@@ -120,8 +118,6 @@ const Home = ({ navigation }) => {
                 <IconMapBiru style={styles.mapBiru}></IconMapBiru>
                 <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                 <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
-              </TouchableOpacity>
-              <TouchableOpacity>
                 <IconBackPanah style={styles.backPanah}></IconBackPanah>
               </TouchableOpacity>
               <Text style={styles.garis}>_______________________________________________</Text>
@@ -132,8 +128,6 @@ const Home = ({ navigation }) => {
                 <IconMapBiru style={styles.mapBiru}></IconMapBiru>
                 <Text style={styles.judulKota}>Stasiun Surabaya Pasar Turi</Text>
                 <Text style={styles.judulAlamat}>Jl. Semarang, Gundih, Bubutan, Kota Surabaya, 60172</Text>
-              </TouchableOpacity>
-              <TouchableOpacity>
                 <IconBackPanah style={styles.backPanah}></IconBackPanah>
               </TouchableOpacity>
               <Text style={styles.garis}>_______________________________________________</Text>
@@ -141,9 +135,7 @@ const Home = ({ navigation }) => {
           </View>
 
           <View>
-            <TouchableOpacity>
-              <IconSavePlus style={styles.savePlus}></IconSavePlus>
-            </TouchableOpacity>
+            <IconSavePlus style={styles.savePlus}></IconSavePlus>
             <Text style={styles.tekSatu}>Simpan alamat. pesan lebih cepat</Text>
             <Text style={styles.tekDua}>Ada alamat yang sering dipakai? Simpan yuk, biar</Text>
             <Text style={styles.tekTiga}>gak ribet ketik alamat lagi</Text>
@@ -156,7 +148,7 @@ const Home = ({ navigation }) => {
               </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => navigateTo('AddFavoritKantor')}>
+            <TouchableOpacity onPress={() => navigateTo('AddFavoritAddress')}>
               <View style={styles.kantor}>
                 <View style={styles.kotakFavorit}></View>
                 <Text style={styles.tekFavorit}>Simpan Kantor</Text>

@@ -1,15 +1,15 @@
-import { Dimensions, StyleSheet } from "react-native";
+import {Dimensions, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   page: {
-        flex: 1
-    },
+    flex: 1,
+  },
   judul: {
     color: 'black',
     textAlign: 'center',
     fontSize: 18,
     marginTop: -16,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   iconpanah: {
     color: 'black',
@@ -21,14 +21,14 @@ const styles = StyleSheet.create({
     marginTop: 90,
     marginLeft: 28,
     height: 290,
-    width: 320
+    width: 320,
   },
   judulSatu: {
     color: 'black',
     marginTop: 10,
     textAlign: 'center',
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   judulDua: {
     color: 'black',
@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
     color: '#ffff',
     marginTop: -30,
     textAlign: 'center',
-    fontSize: 16
-  }
-})
+    fontSize: 16,
+  },
+});
 
 export default styles;
