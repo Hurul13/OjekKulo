@@ -45,7 +45,7 @@ const DataSaveAddress = ({navigation}) => {
       </View>
 
       <View style={styles.bottom}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigateTo('SearchSaveAddress')}>
           <View style={styles.search}></View>
           <Text style={styles.tekBottom}>Tambah Alamat</Text>
         </TouchableOpacity>

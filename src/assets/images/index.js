@@ -1,8 +1,17 @@
-import Logo from './logo.png'
-import SplashBG from './SplashBG.png'
-import ImageHeader from './header.png'
-import NotFoundPeta from './notFoundPeta.png'
-import NotFoundVoucher from './notFoundVoucher.png'
-import BgVoucher from './header2.png'
+import Logo from './logo.png';
+import SplashBG from './SplashBG.png';
+import ImageHeader from './header.png';
+import NotFoundPeta from './notFoundPeta.png';
+import NotFoundVoucher from './notFoundVoucher.png';
+import BgVoucher from './header2.png';
+import DeleteYN from './deleteYN.png';
 
-export { Logo, SplashBG, ImageHeader, NotFoundPeta, NotFoundVoucher, BgVoucher}
+export {
+  Logo,
+  SplashBG,
+  ImageHeader,
+  NotFoundPeta,
+  NotFoundVoucher,
+  BgVoucher,
+  DeleteYN,
+};

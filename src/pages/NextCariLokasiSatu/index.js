@@ -72,16 +72,22 @@ const NextCariLokasiSatu = ({navigation, isActive = true}) => {
           doDebug={false}
         />
         <View style={styles.container}>
-          <TouchableOpacity onPress={() => navigateTo('app-favaddress')}>
+          <TouchableOpacity onPress={() => navigateTo('EditLokasi')}>
             <IconBackBulat style={styles.back} />
           </TouchableOpacity>
           <View style={styles.footer}>
             <View style={styles.header}>
-              <Text style={styles.judul}>Tambah Alamat</Text>
-              <TouchableOpacity onPress={() => navigateTo('EditAddress')}>
-                <IconMapsSearch1 style={styles.iconmapssearch} />
+              <Text style={styles.judul}>Cek lagi titik jemput di peta</Text>
+              <Text style={styles.judulKecil}>
+                Pilih lokasi strategis terdekat.
+              </Text>
+              <TouchableOpacity onPress={() => navigateTo('EditLokasiJemput')}>
+                <IconEdit style={styles.iconmapsedit} />
               </TouchableOpacity>
             </View>
+            <Text style={styles.line}>
+              ______________________________________________________
+            </Text>
             <View style={styles.address}>
               <IconMapsBlue style={styles.iconmapblue} />
               <Text style={styles.textaddresstop}>{currentLocation}</Text>
@@ -89,8 +95,8 @@ const NextCariLokasiSatu = ({navigation, isActive = true}) => {
             {/* <Text style={styles.textaddressbottom}>Jl. Park Regency Blok B No.9, RT.000/RW.00, Keputih, Kec.</Text>
                     <Text style={styles.textaddressbottom1}>Sukolilo, Kota SBY, Jawa Timur 60111, Indonesia</Text> */}
             <View style={styles.save}>
-              <IconBookmark style={styles.iconsave} />
-              <Text style={styles.textsavetop}>Nama alamat</Text>
+              <IconPaper style={styles.iconsave} />
+              <Text style={styles.textsavetop}>Catatan buat driver</Text>
             </View>
 
             {/* <Text style={styles.textsavebottom}>Cth: Sekolah, Rumah nenek</Text> */}
@@ -98,17 +104,16 @@ const NextCariLokasiSatu = ({navigation, isActive = true}) => {
             <TextInput
               style={styles.textsavebottom}
               onChangeText={newText => setText(newText)}
-              placeholder="Cth: Sekolah, Rumah nenek"
+              placeholder="Yang pake baju merah. Jangan sampe lolos ~"
               placeholderTextColor="#000"
               value={text}
             />
 
-            {/* <Text style={styles.line}>________________</Text> */}
             <TouchableOpacity
               isVisible={isActive}
               style={styles.button(text)}
-              onPress={() => navigateTo('EditAddress')}>
-              <Text style={styles.textButton}>Simpan</Text>
+              onPress={() => navigateTo('NextCariLokasiDua')}>
+              <Text style={styles.textButton}>Lanjut</Text>
             </TouchableOpacity>
           </View>
         </View>
