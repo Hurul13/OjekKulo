@@ -10,7 +10,7 @@ const Splash = ({navigation}) => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('NextCariLokasiSatu');
+      navigation.replace('EditLokasiJemput');
     }, 3000);
   }, [navigation]);
 
